@@ -29,30 +29,63 @@ class Dogs
   # only edit below this line
 
   def small_dogs
-    # only use the @dogs instance variable
+    small_dogs = []
+    @dogs.each do |dog|
+      small_dogs << dog if dog[:size] == :small
+    end
+    small_dogs
   end
 
   def huge_dog
-    # only use the @dogs instance variable
+    huge_dogs = []
+    @dogs.each do |dog|
+      huge_dogs << dog if dog[:size] == :huge
+    end
+    huge_dogs.first
   end
 
   def large_dog_names
-    # only use the @dogs instance variable
+    large_dogs = []
+    @dogs.each do |dog|
+      large_dogs << dog[:name] if dog[:size] == :large
+    end
+    large_dogs
   end
 
   def joes_large_dogs
-    # only use the @dogs instance variable
+    joes_large_dogs = []
+    @dogs.each do |dog|
+      joes_large_dogs << dog[:name] if dog[:size] == :large && dog[:owner][:name][:first] == 'Joe'
+    end
+    joes_large_dogs
   end
 
   def sizes
-    # only use the @dogs instance variable
+    dog_sizes = []
+    @dogs.each do |dog|
+      dog_sizes << dog[:size]
+      dog_sizes.uniq!
+    end
+    dog_sizes
   end
 
   def owners
-    # only use the @dogs instance variable
+    dog_owners = []
+    @dogs.each do |dog|
+      owner = "#{dog[:owner][:name][:first]} #{dog[:owner][:name][:last]}"
+      dog_owners << owner
+      dog_owners.uniq!
+    end
+    dog_owners
   end
 
   def average_owners
-    # only use the @dogs instance variable and constants
+    dog_owners = []
+    @dogs.each do |dog|
+      owner = "#{dog[:owner][:name][:first]} #{dog[:owner][:name][:last]}"
+      dog_owners << owner if dog[:owner][:owner_quality] == AVERAGE
+      dog_owners.uniq!
+    end
+    dog_owners
   end
 end

@@ -1,5 +1,6 @@
 require 'rspec'
 require 'rspec/autorun'
+require_relative 'dogs_data'
 
 describe 'Dog Hash' do
   it "returns Harleigh's favorite toy" do

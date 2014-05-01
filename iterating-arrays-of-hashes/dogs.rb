@@ -30,61 +30,68 @@ class Dogs
 
   def small_dogs
     small_dogs = []
-    @dogs.each do |dog|
+    @dogs.cycle do |dog|
       small_dogs << dog if dog[:size] == :small
+      break if dog[:name] == "Trixie"
     end
     small_dogs
   end
 
   def huge_dog
     huge_dogs = []
-    @dogs.each do |dog|
+    @dogs.cycle do |dog|
       huge_dogs << dog if dog[:size] == :huge
+      break if dog[:name] == "Trixie"
     end
     huge_dogs.first
   end
 
   def large_dog_names
     large_dogs = []
-    @dogs.each do |dog|
+    @dogs.cycle do |dog|
       large_dogs << dog[:name] if dog[:size] == :large
+      break if dog[:name] == "Trixie"
     end
     large_dogs
   end
 
   def joes_large_dogs
     joes_large_dogs = []
-    @dogs.each do |dog|
+    @dogs.cycle do |dog|
       joes_large_dogs << dog[:name] if dog[:size] == :large && dog[:owner][:name][:first] == 'Joe'
+      break if dog[:name] == "Trixie"
     end
     joes_large_dogs
   end
 
   def sizes
     dog_sizes = []
-    @dogs.each do |dog|
+    @dogs.cycle do |dog|
       dog_sizes << dog[:size]
       dog_sizes.uniq!
+      break if dog[:name] == "Trixie"
     end
     dog_sizes
   end
 
   def owners
     dog_owners = []
-    @dogs.each do |dog|
+    @dogs.cycle do |dog|
       owner = "#{dog[:owner][:name][:first]} #{dog[:owner][:name][:last]}"
       dog_owners << owner
       dog_owners.uniq!
+      break if dog[:name] == "Trixie"
     end
     dog_owners
   end
 
   def average_owners
     dog_owners = []
-    @dogs.each do |dog|
+    @dogs.cycle do |dog|
       owner = "#{dog[:owner][:name][:first]} #{dog[:owner][:name][:last]}"
       dog_owners << owner if dog[:owner][:owner_quality] == AVERAGE
       dog_owners.uniq!
+      break if dog[:name] == "Trixie"
     end
     dog_owners
   end

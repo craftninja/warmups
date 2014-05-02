@@ -38,13 +38,19 @@ class Dogs
   end
 
   def large_dog_names
-    @dogs.map { |dog| dog[:name] if dog[:size] == :large }.compact
+    @dogs.reduce([]) do |large_dogs, dog|
+      large_dogs << dog[:name] if dog[:size] == :large
+      large_dogs
+    end
   end
 
   def joes_large_dogs
-    @dogs.map do |dog|
-      dog[:name] if dog[:size] == :large && dog[:owner][:name][:first] == 'Joe'
-    end.compact
+    @dogs.reduce([]) do |joes_large_dogs, dog|
+      if dog[:size] == :large && dog[:owner][:name][:first] == 'Joe'
+        joes_large_dogs << dog[:name]
+      end
+      joes_large_dogs
+    end
   end
 
   def sizes

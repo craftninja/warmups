@@ -18,4 +18,8 @@ class HttpResponse
     headers
   end
 
+  def body
+    body = @response[/<.*\z/m]
+  end
+
 end

@@ -56,4 +56,11 @@ describe 'HttpResponse' do
     expect(actual).to eq(expected)
   end
 
+  it 'returns the status code' do
+    http_response = HttpResponse.new(response_text)
+    actual = http_response.status_code
+    expected = 200
+    expect(actual).to eq(expected)
+  end
+
 end

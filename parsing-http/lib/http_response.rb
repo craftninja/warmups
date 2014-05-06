@@ -22,4 +22,8 @@ class HttpResponse
     body = @response[/<.*\z/m]
   end
 
+  def status_code
+    code = @response.lines[0]
+    code[/\d\d\d/].to_i
+  end
 end

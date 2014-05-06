@@ -4,8 +4,7 @@ require 'rspec'
 describe 'HttpResponse' do
 
   let(:response_text) do
-    %Q{
-    HTTP/1.1 200 OK
+    %Q{HTTP/1.1 200 OK
     Server: nginx/1.4.6 (Ubuntu)
     Date: Tue, 06 May 2014 02:17:16 GMT
     Content-Type: text/html

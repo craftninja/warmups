@@ -26,7 +26,8 @@ Turning in
 
 When you're done, create a gist on github. Please submit a pull request against this README linking to your gist.
 
-Gists
-===
-* Emily Platzer - [https://gist.github.com/craftninja/454b9a2725351020a238](https://gist.github.com/craftninja/454b9a2725351020a238)
-* 
+### My gists:
+
+* [https://gist.github.com/craftninja/454b9a2725351020a238](https://gist.github.com/craftninja/454b9a2725351020a238)
+* [https://gist.github.com/craftninja/686ed871fe631f5eb716](https://gist.github.com/craftninja/686ed871fe631f5eb716)
+* [https://gist.github.com/craftninja/74850622ec9490be3808](https://gist.github.com/craftninja/74850622ec9490be3808)
